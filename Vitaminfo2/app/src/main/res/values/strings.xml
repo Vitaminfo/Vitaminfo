@@ -4,4 +4,5 @@
     <string name="title_activity_food">foodActivity</string>
     <string name="title_activity_food_info">foodInfoActivity</string>
     <string name="foodActivityTitle">Foods</string>
+    <string name="title_activity_userinfo">userinfo</string>
 </resources>

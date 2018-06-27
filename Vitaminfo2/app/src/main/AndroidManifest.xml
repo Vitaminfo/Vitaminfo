@@ -26,6 +26,10 @@
         <activity
             android:name=".foodInfoActivity"
             android:label="@string/title_activity_food_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".userinfo"
+            android:label="@string/title_activity_userinfo"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
