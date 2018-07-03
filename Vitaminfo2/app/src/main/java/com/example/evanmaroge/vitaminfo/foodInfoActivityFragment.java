@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class foodInfoActivityFragment extends Fragment {
+public class FoodInfoActivityFragment extends Fragment {
 
-    public foodInfoActivityFragment() {
+    public FoodInfoActivityFragment() {
     }
 
     @Override
