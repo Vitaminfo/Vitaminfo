@@ -1,8 +1,10 @@
 package com.example.evanmaroge.vitaminfo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,11 +36,27 @@ public class VitaminAdapter extends RecyclerView.Adapter<VitaminAdapter.VitaminV
     }
 
     @Override
-    public void onBindViewHolder(@NonNull VitaminViewHolder holder, int position) {
-        String vitamin = vitamins[position];
-        String letter = letters[position];
+    public void onBindViewHolder(@NonNull VitaminViewHolder holder, final int position) {
+        final String vitamin = vitamins[position];
+        final String letter = letters[position];
         holder.name.setText(vitamin);
         holder.let.setText(letter);
+        holder.name.setOnClickListener(new View.OnClickListener(){
+
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,FoodActivity.class);
+                intent.putExtra("vitaminPosition", position);
+                intent.putExtra("vitaminName", vitamin);
+                intent.putExtra("vitaminLetter",letter);
+
+
+
+                context.startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -53,7 +71,7 @@ public class VitaminAdapter extends RecyclerView.Adapter<VitaminAdapter.VitaminV
 
         public VitaminViewHolder(View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.imageView);
+//            imageView = itemView.findViewById(R.id.imageView);
             name = itemView.findViewById(R.id.textViewTitle);
             let = itemView.findViewById(R.id.textView0);
 

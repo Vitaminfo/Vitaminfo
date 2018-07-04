@@ -24,4 +24,18 @@ public class Vitamin {
     public String getLetterName() {
         return letterName;
     }
+
+
+
+    public String[] getFoodsThatContainVitamin(Vitamin vitamin){
+        String[] foods = FoodsThatContainVitamin_Data.getVitaminsFood();
+        String [] foodsThatContainVitamin = getFoodsFromStringArray(foods, vitamin.getId());
+        return foodsThatContainVitamin;
+    }
+    //helper method that uses String split method to retrieve specific food from an array passed into it.
+    private String[]getFoodsFromStringArray(String[] array, int id){
+        String [] arrayOfSpecificFoodVitamin = array[id].split(", ", 10);
+
+        return arrayOfSpecificFoodVitamin;
+    }
 }
