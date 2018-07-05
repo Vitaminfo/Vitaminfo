@@ -49,19 +49,12 @@ public class FoodActivityFragment extends Fragment {
         vitaminLetter = getActivity().getIntent().getStringExtra("vitaminLetter");
         vitaminName = getActivity().getIntent().getStringExtra("vitaminName");
 
-//        Log.i(TAG, "MyClass.getView() — get item number " + position);
-//        Log.i(TAG, "MyClass.getView() — get item number " + vitaminName);
-//        Log.i(TAG, "MyClass.getView() — get item number " + vitaminLetter);
 
-
-
+        //takes the vitamin selected and retrieves a list of foods from the Food Nutrition class using the Vitamin class
         Vitamin vitaminSelected = new Vitamin(position,vitaminName,vitaminLetter);
         String[] vitaminSelectedFoods = vitaminSelected.getFoodsThatContainVitamin(vitaminSelected);
 
-        for(int i = 0;i<vitaminSelectedFoods.length;i++){
-            Log.i(TAG, "Vitamin " + i + "    " + vitaminSelectedFoods[i]);
 
-        }
         recyclerView = fragmentView.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
 //

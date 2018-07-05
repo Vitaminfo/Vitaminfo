@@ -8,7 +8,7 @@
     tools:showIn="@layout/activity_food_info">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/foodName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -30,7 +30,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/foodName"
         app:layout_constraintVertical_bias="0.0">
 
         <TableRow
@@ -54,8 +54,8 @@
         android:id="@+id/totalCaloriesText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="25dp"
         android:text="Calories:"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="@+id/tableLayout"
@@ -66,8 +66,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
         android:text="Serving Size:"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toStartOf="@+id/servingSizeAmount"
@@ -80,53 +80,51 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
         android:text="(calories amount)"
         app:layout_constraintBottom_toTopOf="@+id/fatAmount"
         app:layout_constraintEnd_toEndOf="@+id/tableLayout"
-        app:layout_constraintHorizontal_bias="0.404"
         app:layout_constraintStart_toEndOf="@+id/totalCaloriesText"
-        app:layout_constraintTop_toBottomOf="@+id/servingSizeAmount" />
+        app:layout_constraintTop_toBottomOf="@+id/servingSizeAmount"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <TextView
         android:id="@+id/fatAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
         android:text="(fat amount)"
         app:layout_constraintEnd_toEndOf="@+id/tableLayout"
-        app:layout_constraintHorizontal_bias="0.34"
-        app:layout_constraintStart_toEndOf="@+id/totalCaloriesText"
+        app:layout_constraintStart_toEndOf="@+id/totalFatText"
         app:layout_constraintTop_toBottomOf="@+id/caloriesAmount" />
 
     <TextView
         android:id="@+id/sodiumAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:text="(calories amount)"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
+        android:text="(sodium amount)"
         app:layout_constraintEnd_toEndOf="@+id/tableLayout"
-        app:layout_constraintHorizontal_bias="0.404"
-        app:layout_constraintStart_toEndOf="@+id/totalCaloriesText"
+        app:layout_constraintStart_toEndOf="@+id/sodiumText"
         app:layout_constraintTop_toBottomOf="@+id/fatAmount" />
 
     <TextView
         android:id="@+id/carbohydratesAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
         android:text="(carbohydrates amount)"
         app:layout_constraintEnd_toEndOf="@+id/tableLayout"
-        app:layout_constraintHorizontal_bias="0.54"
-        app:layout_constraintStart_toEndOf="@+id/totalCaloriesText"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toEndOf="@+id/carbohydratesText2"
         app:layout_constraintTop_toBottomOf="@+id/sodiumAmount" />
 
     <TextView
@@ -135,7 +133,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="25dp"
         android:text="(serving size amount)"
         app:layout_constraintEnd_toEndOf="@+id/tableLayout"
         app:layout_constraintHorizontal_bias="0.215"
@@ -146,8 +144,8 @@
         android:id="@+id/totalFatText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="25dp"
         android:text="Total Fat:"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="@+id/tableLayout"
@@ -157,24 +155,21 @@
         android:id="@+id/sodiumText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="25dp"
         android:text="Sodium:"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="@+id/tableLayout"
         app:layout_constraintTop_toBottomOf="@+id/totalFatText" />
 
     <TextView
-        android:id="@+id/carbohydratesText"
+        android:id="@+id/proteinText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="25dp"
         android:text="Protein: "
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toStartOf="@+id/proteinAmount"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tableLayout"
         app:layout_constraintTop_toBottomOf="@+id/carbohydratesText2" />
 
@@ -182,8 +177,8 @@
         android:id="@+id/carbohydratesText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="25dp"
         android:text="Carbohydrates: "
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="@+id/tableLayout"
@@ -193,9 +188,12 @@
         android:id="@+id/proteinAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
         android:text="(protein amount)"
-        app:layout_constraintTop_toBottomOf="@+id/carbohydratesAmount"
-        tools:layout_editor_absoluteX="161dp" />
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout"
+        app:layout_constraintStart_toEndOf="@+id/proteinText"
+        app:layout_constraintTop_toBottomOf="@+id/carbohydratesAmount" />
 
 </android.support.constraint.ConstraintLayout>

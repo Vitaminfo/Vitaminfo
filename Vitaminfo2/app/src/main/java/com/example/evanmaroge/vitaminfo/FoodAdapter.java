@@ -1,6 +1,7 @@
 package com.example.evanmaroge.vitaminfo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 
         private LayoutInflater inflater;
 
-
+        private Context context;
 
         class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -28,7 +29,8 @@ import android.widget.TextView;
         public FoodAdapter(Context context, String[] foodFromVitamins) {
 
             inflater = LayoutInflater.from(context);
-        foods = foodFromVitamins;
+            foods = foodFromVitamins;
+            this.context = context;
         }
 
         // Create new views (invoked by the layout manager)
@@ -51,8 +53,15 @@ import android.widget.TextView;
 
                 @Override
                 public void onClick(View view) {
+                    Intent intent = new Intent(context,FoodInfoActivity.class);
 
+                    String foodSelected = foods[position];
+
+                    intent.putExtra("foodSelected", foodSelected);
+
+                    context.startActivity(intent);
                 }
+
             });
 
         }
