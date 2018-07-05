@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
     public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
@@ -18,8 +19,10 @@ import android.widget.TextView;
         class ViewHolder extends RecyclerView.ViewHolder {
 
             TextView textView;
+            ImageView imageView;
             public ViewHolder(View itemView){
                 super(itemView);
+                imageView = (ImageView) itemView.findViewById(R.id.foodImage);
                 textView = (TextView)itemView.findViewById(R.id.listText);
             }
 
@@ -48,6 +51,7 @@ import android.widget.TextView;
 
         String data = foods[position];
         holder.textView.setText(data);
+        holder.imageView.setImageResource(R.drawable.carrots);
             holder.textView.setOnClickListener(new View.OnClickListener(){
 
 
