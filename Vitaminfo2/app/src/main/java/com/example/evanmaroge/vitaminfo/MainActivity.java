@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setImageResource(R.mipmap.fabpic);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
